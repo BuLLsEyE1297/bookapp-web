@@ -1,29 +1,77 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>Login Page</title>
+<style>
+body {
+	background-image: url("w.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: white;
+}
+
+a {
+	color: cyan;
+}
+
+table {
+	margin: auto;
+	margin-top: 20%;
+}
+
+footer {
+	width: 100%;
+	background-color: black;
+	position: absolute;
+	left: 50%;
+	top: 98.5%;
+	transform: translate(-50%, -50%);
+}
+
+.LoginBtn {
+	padding: 3px 90px;
+}
+
+.bottom {
+	position: absolute;
+	bottom: 40px;
+	left: 40%;
+}
+
+footer p {
+	margin: 0 auto;
+	text-align: center;
+}
+</style>
 </head>
 <body>
-<form method ="post"  action="LoginController">
-<table>
-<tbody>
-<tr>
-<td>email</td>
-<td><input type="email" name="email"></td>
-</tr>
-<tr>
-<td>password</td>
-<td><input type="password" name="password"></td>
-</tr>
-<tr>
-<td><a href="register.html">register</a></td>
-</tr>
-<tr>
-<td><button type="submit">Login</button></td>
-</tr>
-</tbody>
-</table>
-</form>
+	<form method="post" action="LoginController">
+		<table>
+			<tbody>
+				<tr>
+					<td>EMAIL</td>
+					<td><input type="email" name="email" required></td>
+				</tr>
+				<tr>
+					<td>PASSWORD</td>
+					<td><input type="password" name="password" required></td>
+				</tr>
+				<tr>
+					<td><button claass='LoginBtn' type="submit">LOGIN</button></td>
+				</tr>
+				<tr>
+					<td><a href="register.html">REGISTER</a></td>
+					<br>
+					<br>
+					<td><a href="forget.html">Forget Password</a></td>
+				</tr>
+
+			</tbody>
+		</table>
+		<footer>
+			<p>© Copyright 2019 karthikeyan - All Rights Reserved</p>
+		</footer>
+	</form>
 </body>
 </html>

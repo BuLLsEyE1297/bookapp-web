@@ -10,13 +10,21 @@
 </head>
 <body>
 	<table>
+		<tr>
+			<td>ID</td>
+			<td>Name</td>
+			<td>Price</td>
+			<td>Author</td>
+		</tr>
 		<c:forEach var="book" items="${BOOKS }">
 			<tr>
 				<td>${book.id }</td>
 				<td>${book.name }</td>
 				<td>${book.price }</td>
+				<td>${book.author.name } <a href="read.html">READ</a></td>
 			</tr>
 		</c:forEach>
+		<a href="search.html">BACK</a>
 	</table>
 </body>
 </html>

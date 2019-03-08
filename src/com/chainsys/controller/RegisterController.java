@@ -4,11 +4,15 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.chainsys.bookapp.dao.RegisterDAO;
+import com.chainsys.bookapp.model.RegisterClass;
 
 /**
  * Servlet implementation class RegisterController
@@ -52,7 +56,9 @@ public class RegisterController extends HttpServlet {
 		registerClass.password=password;
 		registerClass.gender=gender;
 		try {
-			BookDAO.userinsert(registerClass);
+			RegisterDAO.userinsert(registerClass);
+			RequestDispatcher rd = request.getRequestDispatcher("login.html");
+			rd.forward(request, response);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

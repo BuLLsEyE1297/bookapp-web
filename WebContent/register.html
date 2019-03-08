@@ -3,20 +3,101 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Registration</title>
+<style>
+body {
+	background-image: url("aa.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: black;
+}
+
+table {
+	margin: auto;
+	margin-top: 13%;
+}
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+	var password = document.getElementById("txtPassword")
+	, confirm_password = document.getElementById("txtConfirmPassword");
+
+	function validatePassword(){
+		if(password.value != confirm_password.value) {
+		  confirm_password.setCustomValidity("Passwords Don't Match");
+		} else {
+		  confirm_password.setCustomValidity('');
+		}
+	}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+    
+//    $(function () {
+   //     $("#btnSubmit").click(function () {
+      //      var password = $("#txtPassword").val();
+         //   var confirmPassword = $("#txtConfirmPassword").val();
+           // if (password != confirmPassword) {
+             //   alert("Passwords do not match.");
+               // return false;
+            //}
+           // return true;
+       // });
+    //});
+</script>
 </head>
 <body>
-<form method ="post" action="RegisterController">
-username<input type="text" name="username"><br>
-email<input type="email" name="email"><br>
-password<input type="password" name="password"><br>
-<input type="radio" name="gender"
-value="male" checked> Male<br>
-<input type="radio" name="gender"
-value="female" checked> Female<br>
-<input type="radio" name="gender"
-value="other" checked> Other<br>
-<button type="submit">Register</button>
-<a href ="search.html">search book</a>
-</form>
+	<form method="post" action="RegisterController">
+		<table>
+			<tbody>
+				<tr>
+					<td>USERNAME</td>
+					<td><input type="text" name="username" required><br></td>
+				</tr>
+				<tr>
+					<td>EMAIL</td>
+					<td><input type="email" name="email" required><br></td>
+				</tr>
+				<tr>
+        <td>
+            Password:
+        </td>
+        <td>
+            <input type="password" id="txtPassword" name="password"/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Confirm Password:
+        </td>
+        <td>
+            <input type="password" id="txtConfirmPassword" />
+        </td>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        
+    </tr>
+					<td><input type="radio" name="gender" value="male" required
+						checked> Male</td>
+					<br>
+				</tr>
+				<tr>
+					<td><input type="radio" name="gender" value="female" required
+						checked> Female</td>
+						<br>
+				</tr>
+				<tr>
+					<td><input type="radio" name="gender" value="other" required
+						checked> Other</td>
+					<br>
+				</tr>
+				<tr>
+				<td><input type="submit" id="btnSubmit" value="REGISTER" /></td>
+					
+				</tr>
+			</tbody>
+		</table>
+	</form>
 </body>
 </html>

@@ -1,0 +1,70 @@
+Chapter 1
+Welcome to Software
+Construction
+cc2e.com/0178 Contents
+¦ 1.1 What Is Software Construction?: page 3
+¦ 1.2 Why Is Software Construction Important?: page 6
+¦ 1.3 How to Read This Book: page 8
+Related Topics
+¦ Who should read this book: Preface
+¦ Benefits of reading the book: Preface
+¦ Why the book was written: Preface
+You know what “construction” means when it’s used outside software development.
+“Construction” is the work “construction workers” do when they build a house, a
+school, or a skyscraper. When you were younger, you built things out of “construction
+paper.” In common usage, “construction” refers to the process of building. The construction
+process might include some aspects of planning, designing, and checking
+your work, but mostly “construction” refers to the hands-on part of creating something.
+1.1 What Is Software Construction?
+Developing computer software can be a complicated process, and in the last 25 years,
+researchers have identified numerous distinct activities that go into software development.
+They include
+¦ Problem definition
+¦ Requirements development
+¦ Construction planning
+¦ Software architecture, or high-level design
+¦ Detailed design
+¦ Coding and debugging
+¦ Unit testing
+4 Chapter 1: Welcome to Software Construction
+¦ Integration testing
+¦ Integration
+¦ System testing
+¦ Corrective maintenance
+If you’ve worked on informal projects, you might think that this list represents a lot of
+red tape. If you’ve worked on projects that are too formal, you know that this list represents
+a lot of red tape! It’s hard to strike a balance between too little and too much
+formality, and that’s discussed later in the book.
+If you’ve taught yourself to program or worked mainly on informal projects, you might
+not have made distinctions among the many activities that go into creating a software
+product. Mentally, you might have grouped all of these activities together as “programming.”
+If you work on informal projects, the main activity you think of when you think
+about creating software is probably the activity the researchers refer to as “construction.”
+This intuitive notion of “construction” is fairly accurate, but it suffers from a lack of
+perspective. Putting construction in its context with other activities helps keep the
+focus on the right tasks during construction and appropriately emphasizes important
+nonconstruction activities. Figure 1-1 illustrates construction’s place related to other
+software-development activities.
+Figure 1-1 Construction activities are shown inside the gray circle. Construction focuses on
+coding and debugging but also includes detailed design, unit testing, integration testing,
+and other activities.
+Problem
+Definition
+Requirements
+Development
+Software
+Architecture
+System
+Testing
+Detailed
+Design
+Coding and
+Construction Debugging
+Planning
+Integration
+Corrective
+Maintenance
+Unit
+Testing
+Integration
+Testing
